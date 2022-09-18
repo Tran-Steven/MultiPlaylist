@@ -1,8 +1,8 @@
-<a name="readme-top"></a>
-
-
+<div align="center">
 [![Issues][issues-shield]][issues-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
+</div>
+<a name="readme-top"></a>
 
 <br />
 <div align="center">
