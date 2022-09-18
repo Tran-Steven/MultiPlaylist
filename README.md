@@ -1,7 +1,4 @@
-<div align="center">
-[![Issues][issues-shield]][issues-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-</div>
+
 <a name="readme-top"></a>
 
 <br />
