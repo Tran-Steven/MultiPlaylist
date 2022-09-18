@@ -1,13 +1,10 @@
-
 <a name="readme-top"></a>
-
-<br />
 <div align="center">
 
   <h3 align="center">MultiPlaylist</h3>
 
   <p align="center">
-  Input YouTube, Spotify, (maybe others?), playlists & have them all within one accessible playlist.
+    Input YouTube, Spotify, (maybe others?) playlists & have them all within one accessible playlist.
     <br />
     <br />
     <br />
