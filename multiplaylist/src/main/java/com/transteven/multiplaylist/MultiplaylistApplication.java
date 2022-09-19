@@ -8,5 +8,4 @@ public class MultiplaylistApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(MultiplaylistApplication.class, args);
 	}
-
 }
