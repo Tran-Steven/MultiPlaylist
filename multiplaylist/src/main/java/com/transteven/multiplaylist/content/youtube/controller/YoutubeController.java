@@ -19,25 +19,25 @@ public class YoutubeController {
 	@Autowired
         YoutubeService ytService;
 
-		@RequestMapping(value="/playlist", method=RequestMethod.POST)
+		@RequestMapping(value="/playlist/yt", method=RequestMethod.POST)
 		public YoutubeModel createYoutube(@RequestBody YoutubeModel yt) {
 			return ytService.createYoutube(yt);
 		}
 
 
-		@RequestMapping(value="/playlist", method=RequestMethod.GET)
+		@RequestMapping(value="/playlist/yt", method=RequestMethod.GET)
 			public List<YoutubeModel> readYoutube() {
     		return ytService.getYoutube();
 		}
 
 
-		@RequestMapping(value="/playlist/{ytId}", method=RequestMethod.PUT)
+		@RequestMapping(value="/playlist/yt/{ytId}", method=RequestMethod.PUT)
 			public YoutubeModel readYoutube(@PathVariable(value = "ytId") Long id, @RequestBody YoutubeModel ytDetails) {
     		return ytService.updateYoutube(id, ytDetails);
 		}
 
 
-		@RequestMapping(value="/playlist/{ytId}", method=RequestMethod.DELETE)
+		@RequestMapping(value="/playlist/yt/{ytId}", method=RequestMethod.DELETE)
 			public void deleteYoutube(@PathVariable(value = "ytId") Long id) {
 		    ytService.deleteYoutube(id);
 		}
