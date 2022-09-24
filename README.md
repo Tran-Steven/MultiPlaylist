@@ -4,7 +4,7 @@
   <h3 align="center">MultiPlaylist</h3>
 
   <p align="center">
-    Input YouTube, Spotify, (maybe others?) playlists & have them all within one accessible playlist.
+    Input YouTube, DailyMotion, (maybe others?) playlists & have them all within one accessible playlist.
     <br />
     <br />
     <br />
@@ -43,7 +43,7 @@ Using RESTful API, the website takes in accepted playlist links & appends them t
 
 Extra Information:
 
-- Current planned supported websites: YouTube, Spotify...
+- Current planned supported websites: YouTube, DailyMotion...
 - Possible login system in the future to save custom playlists
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
