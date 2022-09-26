@@ -1,5 +1,4 @@
-package com.transteven.multiplaylist.content.dailymotion.model;
-
+package com.transteven.multiplaylist.youtube.model;
 
 import java.util.ArrayList;
 
@@ -10,18 +9,23 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
+/**
+ * Creates a model for YouTube Playlists.
+ * YouTube Data API v3 (PlaylistItems: list) is stored in a PostgreSQL server.
+ * Only one String list instance variable is made to take in "items": [ playlistItem Resource ]
+ */
 @Entity
-@Table(name="dailymotion")
-public class DailymotionModel {
-    
+@Table(name = "youtube")
+public class YoutubeModel{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id")
+    @Column(name="emp_id")
         private Long id;
 
-    @Column(name="playlist")
-    private ArrayList<String> dailyItems = new ArrayList<>();
-    
+    @Column(name="array")        
+    private ArrayList<String> items = new ArrayList<>();
+
     /**
      * A setter for the ArrayList<String>
      * 
@@ -32,11 +36,13 @@ public class DailymotionModel {
         if (items == null) {
             throw new NullPointerException("Playlist must contain at least one video");
           }
-        this.dailyItems = items;
+        this.items = items;
       }
 
 
     public ArrayList<String> getItems() {
-        return new ArrayList<String>(dailyItems);
+        return new ArrayList<String>(items);
       }
+
+
 }

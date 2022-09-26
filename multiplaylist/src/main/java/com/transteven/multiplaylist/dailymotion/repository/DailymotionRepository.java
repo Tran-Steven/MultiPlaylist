@@ -1,10 +1,10 @@
-package com.transteven.multiplaylist.content.dailymotion.repository;
+package com.transteven.multiplaylist.dailymotion.repository;
 
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.transteven.multiplaylist.content.dailymotion.model.DailymotionModel;
+import com.transteven.multiplaylist.dailymotion.model.DailymotionModel;
 
 /**
  * DailymotionRepository uses JpaRepository methods to:

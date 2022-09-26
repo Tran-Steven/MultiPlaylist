@@ -1,9 +1,9 @@
-package com.transteven.multiplaylist.content.youtube.repository;
+package com.transteven.multiplaylist.youtube.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.transteven.multiplaylist.content.youtube.model.YoutubeModel;
+import com.transteven.multiplaylist.youtube.model.YoutubeModel;
 
 /**
  * YoutubeRepository uses JpaRepository methods to:

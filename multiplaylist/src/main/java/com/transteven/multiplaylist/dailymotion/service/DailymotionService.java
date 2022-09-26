@@ -1,12 +1,12 @@
-package com.transteven.multiplaylist.content.dailymotion.service;
+package com.transteven.multiplaylist.dailymotion.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.transteven.multiplaylist.content.dailymotion.model.DailymotionModel;
-import com.transteven.multiplaylist.content.dailymotion.repository.DailymotionRepository;
+import com.transteven.multiplaylist.dailymotion.model.DailymotionModel;
+import com.transteven.multiplaylist.dailymotion.repository.DailymotionRepository;
 
 
 /**

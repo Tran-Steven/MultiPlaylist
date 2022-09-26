@@ -1,12 +1,12 @@
-package com.transteven.multiplaylist.content.youtube.service;
+package com.transteven.multiplaylist.youtube.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.transteven.multiplaylist.content.youtube.model.YoutubeModel;
-import com.transteven.multiplaylist.content.youtube.repository.YoutubeRepository;
+import com.transteven.multiplaylist.youtube.model.YoutubeModel;
+import com.transteven.multiplaylist.youtube.repository.YoutubeRepository;
 
 /**
  * YoutubeService Deals with Youtube class object(YoutubeModel)

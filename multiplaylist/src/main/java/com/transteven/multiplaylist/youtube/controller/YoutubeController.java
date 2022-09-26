@@ -1,4 +1,4 @@
-package com.transteven.multiplaylist.content.youtube.controller;
+package com.transteven.multiplaylist.youtube.controller;
 
 
 import java.util.List;
@@ -8,10 +8,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.RequestBody;
 
-import com.transteven.multiplaylist.content.youtube.model.YoutubeModel;
-import com.transteven.multiplaylist.content.youtube.service.YoutubeService;
+import com.transteven.multiplaylist.youtube.model.YoutubeModel;
+import com.transteven.multiplaylist.youtube.service.YoutubeService;
+
+import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
 @RequestMapping("/api")
