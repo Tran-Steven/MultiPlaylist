@@ -37,6 +37,6 @@ public class DailymotionModel {
 
 
     public ArrayList<String> getItems() {
-        return new ArrayList<String>(dailyItems);
+        return new ArrayList<>(dailyItems);
       }
 }

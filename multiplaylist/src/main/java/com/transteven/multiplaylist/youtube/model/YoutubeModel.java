@@ -41,7 +41,7 @@ public class YoutubeModel{
 
 
     public ArrayList<String> getItems() {
-        return new ArrayList<String>(items);
+        return new ArrayList<>(items);
       }
 
 
