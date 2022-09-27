@@ -27,11 +27,7 @@ target/
 /.nb-gradle/
 build/
 !**/src/main/**/build/
-<<<<<<< HEAD
-!**/src/test/**/build/
-=======
 !**/src/test/**/build/
 
 ### VS Code ###
 .vscode/
->>>>>>> c9d6b63 (Fresh Maven download & Classes for API)

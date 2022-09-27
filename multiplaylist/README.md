@@ -1,5 +1,4 @@
 <a name="readme-top"></a>
-
 <div align="center">
 
   <h3 align="center">MultiPlaylist</h3>
