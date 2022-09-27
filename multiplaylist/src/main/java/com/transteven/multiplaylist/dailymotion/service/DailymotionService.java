@@ -56,12 +56,12 @@ public class DailymotionService {
      * Update object with details in DailymotionDetails.
      * 
      * @param dmId the id of the Dailymotion playlist in the database.
-     * @param DailymotionDetails Dailymotion object containing new Dailymotion details.
+     * @param dailymotionDetails Dailymotion object containing new Dailymotion details.
      * @return save the dm object to the database.
      */
-    public DailymotionModel updateDailymotion(Long dmId, DailymotionModel DailymotionDetails) {
+    public DailymotionModel updateDailymotion(Long dmId, DailymotionModel dailymotionDetails) {
         DailymotionModel dm = dmRepository.findById(dmId).get();
-        dm.setItems(DailymotionDetails.getItems());
+        dm.setItems(dailymotionDetails.getItems());
                     
         return dmRepository.save(dm);                                
     }
