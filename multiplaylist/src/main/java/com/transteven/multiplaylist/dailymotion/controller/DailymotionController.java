@@ -3,8 +3,11 @@ package com.transteven.multiplaylist.dailymotion.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.transteven.multiplaylist.dailymotion.model.DailymotionModel;
@@ -20,25 +23,25 @@ public class DailymotionController {
     @Autowired
         DailymotionService dmService;
 
-    @RequestMapping(value="/playlist/dm", method=RequestMethod.POST)
+    @PostMapping(value="/playlist/dm")
     public DailymotionModel createDailymotion(@RequestBody DailymotionModel dm) {
         return dmService.createDailymotion(dm);
     }
 
 
-    @RequestMapping(value="/playlist/dm", method=RequestMethod.GET)
+    @GetMapping(value="/playlist/dm")
         public List<DailymotionModel> readDailymotion() {
         return dmService.getDailymotion();
     }
 
 
-    @RequestMapping(value="/playlist/dm/{dmId}", method=RequestMethod.PUT)
+    @PutMapping(value="/playlist/dm/{dmId}")
         public DailymotionModel readDailymotion(@PathVariable(value = "dmId") Long id, @RequestBody DailymotionModel dmDetails) {
         return dmService.updateDailymotion(id, dmDetails);
     }
 
 
-    @RequestMapping(value="/playlist/dm/{dmId}", method=RequestMethod.DELETE)
+    @DeleteMapping(value="/playlist/dm/{dmId}")
         public void deleteDailymotion(@PathVariable(value = "dmId") Long id) {
         dmService.deleteDailymotion(id);
     }
