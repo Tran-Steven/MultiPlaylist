@@ -1,10 +1,13 @@
 import * as React from "react";
 import "./App.css";
+import MultiPlaylistMain from "@components/MultiPlaylistMain/MultiPlaylistMain";
 
 function App() {
   return (
     <div>
-      <main></main>
+      <main>
+        <MultiPlaylistMain />
+      </main>
     </div>
   );
 }
