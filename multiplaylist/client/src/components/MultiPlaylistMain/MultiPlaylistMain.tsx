@@ -1,20 +1,30 @@
+import axios from "axios";
+
 import React, { useState } from "react";
-import PlaylistService from "@utils/Playlist/PlaylistService";
+import Urlparser from "@utils/Urlparser/Urlparser";
 const MultiPlaylistMain = () => {
-  const [id, setId] = useState("");
+  const [link, setLink] = useState<any>("");
+
+  const handleSend = async () => {
+    try {
+      Urlparser(link);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <div>
       <form
         onSubmit={() => {
-          PlaylistService(id);
+          handleSend();
         }}
       >
         <input
           type="url"
-          value={id}
+          value={link}
           onChange={(e) => {
-            setId(e.target.value);
+            setLink(e.target.value);
           }}
         >
           Insert Test
