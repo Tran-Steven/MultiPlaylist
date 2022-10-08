@@ -23,13 +23,13 @@ public class DailymotionController {
     @Autowired
         DailymotionService dmService;
 
-    @PostMapping(value="/playlist/dm")
+    @PostMapping(value="/playlist/dailymotion")
     public DailymotionModel createDailymotion(@RequestBody DailymotionModel dm) {
         return dmService.createDailymotion(dm);
     }
 
 
-    @GetMapping(value="/playlist/dm")
+    @GetMapping(value="/playlist/dailymotion")
         public List<DailymotionModel> readDailymotion() {
         return dmService.getDailymotion();
     }
@@ -41,7 +41,7 @@ public class DailymotionController {
     }
 
 
-    @DeleteMapping(value="/playlist/dm/{dmId}")
+    @DeleteMapping(value="/playlist/dailymotion/{dmId}")
         public void deleteDailymotion(@PathVariable(value = "dmId") Long id) {
         dmService.deleteDailymotion(id);
     }
