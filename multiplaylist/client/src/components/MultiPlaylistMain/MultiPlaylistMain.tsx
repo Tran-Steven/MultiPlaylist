@@ -1,7 +1,7 @@
 import axios from "axios";
 
 import React, { useState } from "react";
-import Urlparser from "@utils/Urlparser/Urlparser";
+import { Urlparser } from "@utils/Urlparser/Urlparser";
 const MultiPlaylistMain = () => {
   const [link, setLink] = useState<any>("");
 
