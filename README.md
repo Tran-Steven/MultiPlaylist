@@ -40,7 +40,7 @@
 
 [MultiPlaylist](https://github.com/Tran-Steven/MultiPlaylist/)
 
-Using RESTful API, the website takes in accepted playlist links & appends them to one main playlist.
+Using REST API, the website takes in accepted playlist/video links & appends them to one main playlist.
 
 Extra Information:
 
@@ -66,9 +66,9 @@ Extra Information:
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 
 1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
+2. Create your Feature Branch (`git checkout -b feature/Feature`)
+3. Commit your Changes (`git commit -m 'Adding Feature'`)
+4. Push to the Branch (`git push origin feature/Feature`)
 5. Open a Pull Request
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
