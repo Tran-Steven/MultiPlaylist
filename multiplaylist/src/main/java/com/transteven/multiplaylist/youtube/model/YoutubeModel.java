@@ -8,7 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
+import javax.persistence.Transient;
 
 /**
  * Creates a model for YouTube Playlists.
@@ -21,10 +21,12 @@ public class YoutubeModel{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="emp_id")
-        private Long id;
+        private int id;
 
-    @Column(name="array")        
-    private ArrayList<String> items = new ArrayList<>();
+
+    @Column(name="array")
+    @Transient
+    private ArrayList<String> items;
 
     /**
      * A setter for the ArrayList<String>
@@ -38,8 +40,14 @@ public class YoutubeModel{
           }
         this.items = items;
       }
+public YoutubeModel(){
 
+}
 
+public YoutubeModel(int id){
+        super();
+        this.id = id;
+}
     public ArrayList<String> getItems() {
         return new ArrayList<>(items);
       }

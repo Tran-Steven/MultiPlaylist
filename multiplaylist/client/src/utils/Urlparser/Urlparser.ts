@@ -1,14 +1,13 @@
 import axios from "axios";
 
-export function Urlparser(props: URL) {
+export async function Urlparser(props: URL) {
   let url = new URL(props);
 
-  // If the link submitted is a shortened redirect link -> turn into regular link
+    // If the link submitted is a shortened redirect link -> turn into regular link
   if (url.hostname.includes("youtu.be" || "dai.ly")) {
-    axios.get(url.href).then(function (res: any) {
-      url = res;
-    });
+    url = await axios.get(url.href)
   }
+
   // Determines if URL is playlist or video and set as key and set the value as the id
   if (url.hostname.includes("dailymotion")) {
     axios.post("/playlists/add/dailymotion", {
