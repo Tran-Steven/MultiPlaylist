@@ -5,7 +5,7 @@
   <h3 align="center">MultiPlaylist</h3>
 
   <p align="center">
-    Input YouTube, DailyMotion, (maybe others?) playlists & have them all within one accessible playlist.
+    Combine videos and playlists from different websites and have them all within one accessible playlist.
     <br />
     <br />
     <br />
@@ -40,21 +40,29 @@
 
 [MultiPlaylist](https://github.com/Tran-Steven/MultiPlaylist/)
 
-Using REST API, the website takes in accepted playlist/video links & appends them to one main playlist.
+MultiPlaylist is a website application that combines playlists or videos from different websites and puts them in one centralized playlist.
 
-Extra Information:
+The list of websites supported as of now are:
 
-- Current planned supported websites: YouTube, DailyMotion...
+* YouTube
+* DailyMotion
+
+Support for other websites may be added at a later point.
+
+### Planned implementations:
+
+- Adding feature to randomize playlist
+- Support for other websites
 - Possible login system in the future to save custom playlists
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 ### Built With
 
-- [![Next][next.js]][next-url]
 - [![React][react.js]][react-url]
-- [![Spring][spring]][spring-url]
+- [![Next][next.js]][next-url]
 - [![Java][java]][java-url]
+- [![Spring][spring]][spring-url]
 - [![PostgreSQL][postgresql]][postgresql-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -63,7 +71,9 @@ Extra Information:
 
 ## Contributing
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+### Have a suggestion or found an issue? 
+
+Please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/Feature`)
@@ -71,7 +81,9 @@ If you have a suggestion that would make this better, please fork the repo and c
 4. Push to the Branch (`git push origin feature/Feature`)
 5. Open a Pull Request
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+More detailed documentation in the [Wiki](https://github.com/Tran-Steven/MultiPlaylist/wiki)
+
+
 
 <!-- LICENSE -->
 
@@ -79,17 +91,16 @@ If you have a suggestion that would make this better, please fork the repo and c
 
 Distributed under the Apache 2.0 License. See `LICENSE.md` for more information.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <!-- CONTACT -->
 
-## Contact
+## Contact Information
 
-Steven Tran - [LinkedIn](https://www.linkedin.com/in/steven-tran-26735b206/) - stevenntran@outlook.com
+Steven Tran 
 
-Project Link: [https://github.com/Tran-Steven/MultiPlaylist](https://github.com/Tran-Steven/MultiPlaylist)
+[LinkedIn](https://www.linkedin.com/in/steven-tran-26735b206/) | stevenntran@outlook.com
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ACKNOWLEDGMENTS -->
 
