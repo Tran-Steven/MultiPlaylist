@@ -1,23 +1,28 @@
 package com.transteven.multiplaylist;
 
-import com.transteven.multiplaylist.youtube.model.YoutubeModel;
-import com.transteven.multiplaylist.youtube.repository.YoutubeRepository;
-import org.springframework.boot.CommandLineRunner;
+import com.transteven.multiplaylist.playlist.model.Playlist;
 import org.springframework.boot.SpringApplication;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
+@RestController
 @SpringBootApplication
-public class MultiplaylistApplication implements CommandLineRunner {
+public class MultiplaylistApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(MultiplaylistApplication.class, args);
 	}
 
-	@Autowired
-	private YoutubeRepository youtubeRepository;
-
-	@Override
-	public void run (String...args) throws Exception {
-		this.youtubeRepository.save(new YoutubeModel(3293));
+	@GetMapping
+	public List<Playlist> hello(){
+		return List.of(
+				new Playlist(
+						1L,
+						"youtube",
+						"playlist"
+				)
+		);
 	}
 }

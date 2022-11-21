@@ -1,8 +1,8 @@
 import * as React from "react";
-import "./App.css";
+
 import MultiPlaylistMain from "@components/MultiPlaylistMain/MultiPlaylistMain";
 
-function App() {
+function _app() {
   return (
     <div>
       <main>
@@ -12,4 +12,4 @@ function App() {
   );
 }
 
-export default App;
+export default _app;

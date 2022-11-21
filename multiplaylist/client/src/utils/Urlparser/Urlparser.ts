@@ -10,12 +10,21 @@ export async function Urlparser(props: URL) {
 
   // Determines if URL is playlist or video and set as key and set the value as the id
   if (url.hostname.includes("dailymotion")) {
-    axios.post("/playlists/add/dailymotion", {
-      url,
+    let param = url.pathname.split("/");
+    await axios.post("/playlists/add/dailymotion", {
+      data: JSON.stringify({
+        host: url.host,
+        type: param[0],
+        id: param[1]
+      })
     });
   } else if (url.hostname === "www.youtube.com") {
-    axios.post("/playlists/add/youtube", {
-      url,
+    await axios.post("/playlists/add/youtube", {
+      data: JSON.stringify({
+        host: url.host,
+        type: url.pathname,
+        id: url.searchParams.get('v' || 'list')
+      })
     });
   } else {
     console.log("Not valid link");
