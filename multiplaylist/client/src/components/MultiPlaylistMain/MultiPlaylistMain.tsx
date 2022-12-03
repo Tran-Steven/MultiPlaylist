@@ -1,20 +1,22 @@
 import axios from "axios";
-import "./MPM.module.css";
+import "@assets/MPM.module.css";
 import React, { useState } from "react";
 import { Urlparser } from "@utils/Urlparser/Urlparser";
+import styles from "@assets/MPM.module.css"
 const MultiPlaylistMain = () => {
   const [link, setLink] = useState<any>("");
 
-  // const handleSend = async () => {
-  //   try {
-  //     Urlparser(link);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
+  const handleSend = async () => {
+    try {
+      Urlparser(link);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
-    <div className={"temp"}>
+    <div>
+
       {/*<form*/}
       {/*  onSubmit={() => {*/}
       {/*    handleSend();*/}
@@ -26,16 +28,14 @@ const MultiPlaylistMain = () => {
       {/*    onChange={(e) => {*/}
       {/*      setLink(e.target.value);*/}
       {/*    }}*/}
-      {/*  >*/}
-      {/*    Insert Test*/}
-      {/*  </input>*/}
+      {/*  />*/}
       {/*  <input type="submit" value="Submit Test" />*/}
       {/*</form>*/}
-        <div className={"container"}>
+        <div className={styles.container}>
             <video autoPlay loop muted>
-                <source src={"https://www.youtube.com/watch?v=z9Ug-3qhrwY"}/>
+                <source src={"/gfcmain.mp4"} type={"video/mp4"}/>
             </video>
-            <div className={"txtBox"}>
+            <div className={styles.txtbox}>
                 <h1>MultiPlaylist</h1>
             </div>
         </div>

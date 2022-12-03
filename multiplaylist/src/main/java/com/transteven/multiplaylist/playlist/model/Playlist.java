@@ -13,17 +13,14 @@ public class Playlist {
         this.website = website;
         this.type = type;
     }
-
     public Playlist(String website,
                     String type) {
         this.website = website;
         this.type = type;
     }
-
     public Long getId() {
         return id;
     }
-
     public void setId(Long id) {
         this.id = id;
     }
