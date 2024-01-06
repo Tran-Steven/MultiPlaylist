@@ -55,6 +55,12 @@ public class User implements UserDetails {
     this.password = password;
   }
 
+  public User(String email, String password) {
+    this.email = email;
+    this.password = password;
+  }
+
+  // Getters & Setters
   public Integer getId() {
     return id;
   }
@@ -71,15 +77,22 @@ public class User implements UserDetails {
     this.email = email;
   }
 
-  public String getPassword() {
-    return password;
-  }
-
-  public void setPassword(String password) {
-    this.password = password;
-  }
-
   // Spring Security
+  @Override
+  public String getPassword() {
+    return this.password;
+  }
+
+  @Override
+  public String getUsername() {
+    return email;
+  }
+
+  @Override
+  public Collection<? extends GrantedAuthority> getAuthorities() {
+    return List.of(new SimpleGrantedAuthority("ROLE_USER"));
+  }
+
   @Override
   public boolean isAccountNonExpired() {
     return true;
