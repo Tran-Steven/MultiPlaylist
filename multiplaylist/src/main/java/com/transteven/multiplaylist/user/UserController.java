@@ -3,12 +3,12 @@ package com.transteven.multiplaylist.user;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-
 
 @RestController
 @RequestMapping("api/v1/users")
@@ -23,9 +23,11 @@ public class UserController {
 
 @PostMapping
 public ResponseEntity<?> registerUser(
-    @RequestBody UserRegistrationRequest request)
+    @RequestBody UserRegistrationRequest request){
     userService.addUser(request);
     String jwtToken = jwtUtil.issueToken(requestEmail(),"ROLE_USER");
     return ResponseEntity.ok().header(HttpHeaders.AUTHORIZATION,jwtToken).build();
+    }
 
+    @GetMapping
 }
