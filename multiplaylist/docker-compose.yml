@@ -10,19 +10,38 @@ services:
       - POSTGRES_DB=transteven
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
-      - PGDATA=/var/lib/postgresql/data/pgdata
+      - PGDATA=/data/postgres
+    volumes:
+      - db:/data/postgres
 
-  transteven:
-    build: ./
-    container_name: transteven
+  multiplaylist-backend:
+    container_name: multiplaylist-backend
+    image: transteven/multiplaylist-backend
     environment:
-      - DB_SERVER:db
-      - POSTGRES_DB=transteven
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/user
     ports:
       - 8443:8443
     depends_on:
       - db
-volumes:
-  postgres_data:
+    networks:
+      - db
+    restart: always
+  multiplaylist-frontend:
+    container_name: multiplaylist-frontend
+    image: transteven/multiplaylist-frontend
+    build:
+      context: multiplaylist/client
+    args:
+      api_base_url: http://localhost:8088
+    ports:
+      - "3000:5173"
+    depends_on:
+      - multiplaylist-backend
+    restart: always
+
+  networks:
+    db:
+      driver: bridge
+
+  volumes:
+    db:
