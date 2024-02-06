@@ -28,7 +28,6 @@
       </ul>
     </li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
@@ -40,7 +39,7 @@
 
 [MultiPlaylist](https://github.com/Tran-Steven/MultiPlaylist/)
 
-MultiPlaylist is a website application that combines playlists or videos from different websites and puts them in one centralized playlist.
+MultiPlaylist is a website application that combines videos from different websites and puts them in one centralized playlist.
 
 The list of websites supported as of now are:
 
@@ -83,13 +82,6 @@ Please fork the repo and create a pull request. You can also simply open an issu
 
 More detailed documentation in the [Wiki](https://github.com/Tran-Steven/MultiPlaylist/wiki)
 
-
-
-<!-- LICENSE -->
-
-## License
-
-Distributed under the Apache 2.0 License. See `LICENSE.md` for more information.
 
 
 
