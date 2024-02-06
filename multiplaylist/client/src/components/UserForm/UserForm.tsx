@@ -1,15 +1,17 @@
 import React, { FormEvent } from "react";
 
-export default function UserForm(
-  { name }: { name: string },
-  { redirect }: { redirect: string }
-) {
-  async function onSubmit(event: FormEvent<HTMLFormElement>){
-    event.preventDefault()
-    const formData = new FormData(event.currentTarget)
-    const response = await fetch('/register',{
-      method:'POST'
-    })
+type Props = {
+  name: string;
+  redirect: string;
+};
+
+export default function UserForm({ name, redirect }: Readonly<Props>) {
+  async function onSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const response = await fetch("/register", {
+      method: "POST",
+    });
   }
   return (
     <div>
