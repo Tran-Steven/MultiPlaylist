@@ -13,6 +13,7 @@ export default function UserForm({ name, redirect }: Readonly<Props>) {
       method: "POST",
     });
   }
+
   return (
     <div>
       <h1>{name}</h1>
@@ -21,7 +22,7 @@ export default function UserForm({ name, redirect }: Readonly<Props>) {
         <input id="email" />
         <label htmlFor={"password"}>Password</label>
         <input id="password" />
-        <input type="submit">{name}</input>
+        <input type="submit" />
       </form>
       <p>{redirect}</p>
     </div>

@@ -1,7 +1,10 @@
-import React, { useState } from "react";
-import UserForm from "../../components/UserForm/UserForm";
-function Landing() {
-  const [hasAccount, setHasAccount] = useState(false);
+"use client"
+
+import { useState } from "react"
+import UserForm from "../components/UserForm/UserForm"
+
+export default function Landing() {
+  const [hasAccount, setHasAccount] = useState(false)
   return (
     <div>
       <main>
@@ -16,7 +19,5 @@ function Landing() {
         <div />
       </main>
     </div>
-  );
+  )
 }
-
-export default Landing;
