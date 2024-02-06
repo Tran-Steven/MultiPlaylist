@@ -1,5 +1,5 @@
 import React, { FormEvent } from "react";
-
+import Image from "next/image";
 type Props = {
   name: string;
   redirect: string;
@@ -15,9 +15,9 @@ export default function UserForm({ name, redirect }: Readonly<Props>) {
   }
 
   return (
-    <div>
-      <h1>{name}</h1>
-      <form onSubmit={onSubmit}>
+    <div className="grid place-content-center w-full h-full">
+      <h1 className="text-center">{name}</h1>
+      <form onSubmit={onSubmit} className="flex flex-col">
         <label htmlFor={"email"}>Email</label>
         <input id="email" />
         <label htmlFor={"password"}>Password</label>
