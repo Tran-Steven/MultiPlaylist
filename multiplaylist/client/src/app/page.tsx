@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function Landing() {
   const [hasAccount, setHasAccount] = useState(false);
   return (
-    <div>
+    <div className="min-h-scree">
       <main className="flex flex-row">
         <UserForm
           name={hasAccount ? "Login" : "Register"}
@@ -17,8 +17,8 @@ export default function Landing() {
               : "Have an account? Sign in here."
           }
         />
-        <div className="flex justify-center w-full h-full content-center">
-          <h1>
+        <div className="bg-red-200 min-h-screen flex justify-center items-center">
+          <h1 className="text-center">
             Mix and match your favorite videos from different websites into one
             playlist
           </h1>
