@@ -1,11 +1,14 @@
 package com.transteven.multiplaylist.user;
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.MappedSuperclass;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 @Getter
 @Setter
@@ -25,13 +28,11 @@ public class User {
   @Column(nullable = false, updatable = false, unique = true)
   private String email;
 
-  protected User() {}
-
   protected User(final String encryptedPassword) {
     this.encryptedPassword = encryptedPassword;
   }
 
-  public Customer(final String email, final String encryptedPassword) {
+  public User(final String email, final String encryptedPassword) {
     this.email = email;
     this.encryptedPassword = encryptedPassword;
   }
