@@ -9,7 +9,6 @@ public class VideoService {
 
   private final VideoDAO videoDAO;
 
-  @Autowired
   public VideoService(final VideoDAO videoDAO) {
     this.videoDAO = videoDAO;
   }
