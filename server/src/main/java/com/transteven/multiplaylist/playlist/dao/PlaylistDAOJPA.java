@@ -12,7 +12,6 @@ public class PlaylistDAOJPA implements PlaylistDAO {
 
   private final PlaylistRepository playlistRepository;
 
-  @Autowired
   public PlaylistDAOJPA(final PlaylistRepository playlistRepository) {
     this.playlistRepository = playlistRepository;
   }
@@ -26,4 +25,9 @@ public class PlaylistDAOJPA implements PlaylistDAO {
   public Optional<Playlist> getPlaylistById(final int id) {
     return playlistRepository.findById(id);
   }
+
+  @Override 
+    public void deletePlaylist(final int id) {
+        playlistRepository.deleteById(id);
+    }
 }

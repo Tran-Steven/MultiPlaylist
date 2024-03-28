@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,19 +20,27 @@ public class PlaylistController {
 
   private final PlaylistService playlistService;
 
-  @Autowired
   public PlaylistController(final PlaylistService playlistService) {
     this.playlistService = playlistService;
   }
 
-  @PostMapping("/create")
-  public ResponseEntity<String> addPlaylist(
+  @Autowired
+  @PostMapping("/{userID}/create")
+  public ResponseEntity<Playlist> createPlaylist(
+    @PathVariable int userID,
     @RequestBody final Playlist playlist
   ) {
     playlistService.createPlaylist(playlist);
-    return new ResponseEntity<>(
-      "Playlist created successfully",
-      HttpStatus.CREATED
-    );
+    return ResponseEntity.ok(playlist);
+  }
+
+  @Autowired
+  @DeleteMapping("/{userID}/{playlistID}/delete")
+  public ResponseEntity<String> deletePlaylist(
+    @PathVariable int userID,
+    @PathVariable int playlistID
+  ) {
+    playlistService.deletePlaylist(playlistID);
+    return ResponseEntity.ok("Playlist deleted successfully");
   }
 }

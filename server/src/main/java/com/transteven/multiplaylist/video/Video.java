@@ -26,7 +26,7 @@ import org.hibernate.annotations.ManyToAny;
 public class Video {
 
   @EmbeddedId
-  private Long id;
+  private int id;
 
   @Column(columnDefinition = "VARCHAR(255)")
   private String url;

@@ -1,8 +1,7 @@
 package com.transteven.multiplaylist.playlist;
 
 import com.transteven.multiplaylist.playlist.dao.PlaylistDAO;
-import com.transteven.multiplaylist.video.Video;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.transteven.multiplaylist.playlist.dto.PlaylistDTO;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -10,7 +9,6 @@ public class PlaylistService {
 
   private final PlaylistDAO playlistDAO;
 
-  @Autowired
   public PlaylistService(final PlaylistDAO playlistDAO) {
     this.playlistDAO = playlistDAO;
   }
@@ -19,7 +17,11 @@ public class PlaylistService {
     playlistDAO.createPlaylist(playlist);
   }
 
-  public PlaylistDTO getPlaylistById(final Long id) {
+  public void deletePlaylist(final int id) {
+    playlistDAO.deletePlaylist(id);
+  }
+
+  public PlaylistDTO getPlaylistById(final int id) {
     return playlistDAO
       .getPlaylistById(id)
       .map(Playlist::toDTO)
